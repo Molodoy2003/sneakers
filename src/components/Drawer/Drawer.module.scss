@@ -1,0 +1,145 @@
+.drawer {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 385px;
+	height: 692px;
+	right: 0;
+	background: #FFF;
+	box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+
+	.cart {
+		display: flex;
+		justify-content: space-between;
+
+		img {
+			cursor: pointer;
+			margin-top: 10px;
+			&:hover {
+				transform: scale(1.3);
+			}
+		}
+	}
+
+	.cartItems {
+		flex: 1 1;
+		overflow: auto;
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	.cartItem {
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
+		padding: 20px 20px 0px 20px;
+
+		.cartInfo {
+			margin-left: 20px;
+
+			p {
+				font-weight: 400;
+				font-size: 14px;
+				color: #000000;
+				padding-bottom: 8px;
+				width: 150px;
+			}
+
+			b {
+				font-weight: 700;
+				font-size: 14px;
+				color: #000000;
+			}
+		}
+
+		.removeImg {
+			cursor: pointer;
+			opacity: 0.5;
+			transition: opacity .5s ease;
+
+			&:hover {
+				opacity: 1;
+				border: 1px solid rgb(129, 129, 129);
+				border-radius: 10px
+			}
+		}
+	}
+
+	.cartTotal {
+		display: flex;
+		flex-direction: column;
+
+		.total {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 10px;
+
+			span {
+				font-weight: 400;
+				font-size: 16px;
+				color: #000000;
+			}
+
+			b {
+				font-weight: 600;
+				font-size: 16px;
+				color: #000000;
+			}
+		}
+
+		.tax {
+			display: flex;
+			justify-content: space-between;
+
+			span {
+				font-weight: 400;
+				font-size: 16px;
+				color: #000000;
+			}
+
+			b {
+				font-weight: 600;
+				font-size: 16px;
+				color: #000000;
+			}
+		}
+
+		button {
+			margin-top: 20px;
+			background: #9DD558;
+			border-radius: 18px;
+			border: none;
+			padding: 18px 0px;
+			cursor: pointer;
+			transition: all .5s ease;
+
+			span {
+				font-weight: 600;
+				font-size: 16px;
+				text-align: center;
+				color: #FFFFFF;
+			}
+
+			&:hover {
+				background: #77b62a;
+			}
+		}
+
+	}
+
+}
+
+.overlay {
+	// display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.1);
+	z-index: 10;
+}
